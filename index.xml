@@ -1,13 +1,11 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html>
- <meta charset="UTF-8">
   <head>
-   
-    <title>Convertitore di testii in equazioni</title>
-     
+    <meta charset="UTF-8">
+    <title>Convertitore di stringhe in equazioni</title>
   </head>
   <body>
-    <h1>Convertitore di testi in equazioni</h1>
+    <h1>Convertitore di stringhe in equazioni</h1>
     <p>Inserisci una stringa:</p>
     <input type="text" id="stringa" name="stringa">
     <button onclick="converti()">Converti</button>
@@ -15,70 +13,99 @@
     
     <script>
       function converti() {
-        const stringaInput = document.getElementById("stringa").value;
+        const stringaInput = document.getElementById("stringa").value.toLowerCase();
         let equazione = "";
         for (let i = 0; i < stringaInput.length; i++) {
-          let char = stringaInput[i];
-          if (char.toUpperCase() === "A") {
-            equazione += "+";
-          } else if (char.toUpperCase() === "E") {
-            equazione += "-";
-          } else if (char.toUpperCase() === "I") {
-            equazione += "*";
-          } else if (char.toUpperCase() === "O") {
-            equazione += "/";
-          } else if (char.toUpperCase() === "U") {
-            equazione += "^";
-          } else if (char.toUpperCase() === "B") {
-            equazione += "1";
-          } else if (char.toUpperCase() === "C") {
-            equazione += "2";
-          } else if (char.toUpperCase() === "D") {
-            equazione += "3";
-          } else if (char.toUpperCase() === "F") {
-            equazione += "4";
-          } else if (char.toUpperCase() === "G") {
-            equazione += "5";
-          } else if (char.toUpperCase() === "H") {
-            equazione += "6";
-          } else if (char.toUpperCase() === "J") {
-            equazione += "7";
-          } else if (char.toUpperCase() === "K") {
-            equazione += "8";
-          } else if (char.toUpperCase() === "L") {
-            equazione += "9";
-          } else if (char.toUpperCase() === "M") {
-            equazione += "10";
-          } else if (char.toUpperCase() === "N") {
-            equazione += "15";
-          } else if (char.toUpperCase() === "P") {
-            equazione += "20";
-          } else if (char.toUpperCase() === "Q") {
-            equazione += "25";
-          } else if (char.toUpperCase() === "R") {
-            equazione += "30";
-          } else if (char.toUpperCase() === "S") {
-            equazione += "35";
-          } else if (char.toUpperCase() === "T") {
-            equazione += "40";
-          } else if (char.toUpperCase() === "V") {
-            equazione += "45";
-          } else if (char.toUpperCase() === "W") {
-            equazione += "50";
-          } else if (char.toUpperCase() === "X") {
-            equazione += "100";
-          } else if (char.toUpperCase() === "Y") {
-            equazione += "200";
-          } else if (char.toUpperCase() === "Z") {
-            equazione += "500";
-          } else if (char === " ") {
-            equazione += ",";
-          } else {
-            equazione += "0";
+          const char = stringaInput[i];
+          switch(char) {
+            case "a":
+              equazione += "+";
+              break;
+            case "e":
+              equazione += "-";
+              break;
+            case "i":
+              equazione += "*";
+              break;
+            case "o":
+              equazione += "/";
+              break;
+            case "u":
+              equazione += "^";
+              break;
+            case "b":
+              equazione += "1";
+              break;
+            case "c":
+              equazione += "2";
+              break;
+            case "d":
+              equazione += "3";
+              break;
+            case "f":
+              equazione += "4";
+              break;
+            case "g":
+              equazione += "5";
+              break;
+            case "h":
+              equazione += "6";
+              break;
+            case "j":
+              equazione += "7";
+              break;
+            case "k":
+              equazione += "8";
+              break;
+            case "l":
+              equazione += "9";
+              break;
+            case "m":
+              equazione += "10";
+              break;
+            case "n":
+              equazione += "15";
+              break;
+            case "p":
+              equazione += "20";
+              break;
+            case "q":
+              equazione += "25";
+              break;
+            case "r":
+              equazione += "30";
+              break;
+            case "s":
+              equazione += "35";
+              break;
+            case "t":
+              equazione += "40";
+              break;
+            case "v":
+              equazione += "45";
+              break;
+            case "w":
+              equazione += "50";
+              break;
+            case "x":
+              equazione += "100";
+              break;
+            case "y":
+              equazione += "200";
+              break;
+            case "z":
+              equazione += "500";
+              break;
+            case " ":
+              equazione += ",";
+              break;
+            default:
+              equazione += "0";
+              break;
           }
         }
         document.getElementById("equazione").innerText = equazione;
       }
     </script>
-      </body>
-      </html>
+  </body>
+</html>
