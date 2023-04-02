@@ -2,10 +2,10 @@
 <html>
   <head>
     <meta charset="UTF-8">
-    <title>Convertitore di stringhe in equazioni</title>
+    <title>Convertitore di stringhe in equazioni!!!!!!</title>
   </head>
   <body>
-    <h1>Convertitore di stringhe in equazioni</h1>
+    <h1>Convertitore di stringhe in equazioni!!!!!!!</h1>
     <p>Inserisci una stringa:</p>
     <input type="text" id="stringa" name="stringa">
     <button onclick="converti()">Converti</button>
