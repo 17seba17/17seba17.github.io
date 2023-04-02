@@ -1,8 +1,10 @@
  <!DOCTYPE html>
 <html>
+ <meta charset="UTF-8">
   <head>
-    <meta charset="UTF-8">
-    <title>Convertitore di stringhe in equazioni</title>
+   
+    <title>Convertitore di testii in equazioni</title>
+     
   </head>
   <body>
     <h1>Convertitore di testi in equazioni</h1>
