@@ -95,6 +95,6 @@ function converti() {
         break;
     }
   }
-  equazione += "1";
+  
   document.getElementById("equazione").innerText = equazione;
 }
