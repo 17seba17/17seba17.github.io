@@ -1,14 +1,13 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset="UTF-8">
-    <title>Convertitore di stringhe in equazio</title>
-    </meta>
+    <meta charset="UTF-8"/>
+    <title>Convertitore di stringhe in equazio!!!!</title>
   </head>
   <body>
-    <h1>Convertitore di stringhe in equazi</h1>
+    <h1>Convertitore di stringhe in equazi!!</h1>
     <p>Inserisci una stringa:</p>
-    <input type="text" id="stringa" name="stringa">
+    <input type="text" id="stringa" name="stringa"/>
     <button onclick="converti()">Converti</button>
     <p id="equazione"></p>
     
