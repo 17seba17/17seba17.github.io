@@ -104,4 +104,5 @@
         document.getElementById("equazione").innerText = equazione;
       }
     </script>
-  </body
+      </body>
+      </html>
