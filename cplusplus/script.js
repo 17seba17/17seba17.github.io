@@ -10,7 +10,7 @@ function calcola() {
         document.querySelector('#risultato').textContent = risultato;
       }
     };
-    xhr.open('POST', 'calcola.php', true);
+    xhr.open('POST', '../cgi-bin/doppio.cgi', true);
     xhr.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
     xhr.send(`numero=${numero}`);
   });
