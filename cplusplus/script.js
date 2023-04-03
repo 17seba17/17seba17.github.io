@@ -1,38 +1,17 @@
-
-///https://raw.githubusercontent.com/17seba17/17seba17.github.io/cplusplus/
-
-    function calculate() {
-      const number = document.getElementById("number").value;
-      fetch("https://raw.githubusercontent.com/17seba17/17seba17.github.io/cplusplus/main/double")
-        .then(response => response.text())
-        .then(program => {
-          const command = `echo ${number} | ${program}`;
-          console.log(command);
-          return fetch(`https://raw.githubusercontent.com/17seba17/17seba17.github.io/cplusplus/dispatches`, {
-            method: 'POST',
-            headers: {
-              'Content-Type': 'application/json',
-              'Authorization': 'Bearer ACCESS_TOKEN'
-            },
-            body: JSON.stringify({
-              event_type: 'run_program',
-              client_payload: {
-                command: command
-              }
-            })
-          });
-        })
-        .then(response => {
-          console.log(response);
-          return response.json();
-        })
-        .then(json => {
-          console.log(json);
-          const output = json.output;
-          document.getElementById("result").innerHTML = `Il doppio di ${number} è ${output}`;
-        })
-        .catch(error => {
-          console.error(error);
-          document.getElementById("result").innerHTML = "Errore durante l'esecuzione del programma";
-        });
-    }
+function calcola() {
+  const form = document.querySelector('#form');
+  form.addEventListener('submit', function(event) {
+    event.preventDefault();
+    const numero = document.querySelector('#numero').value;
+    const xhr = new XMLHttpRequest();
+    xhr.onreadystatechange = function() {
+      if (xhr.readyState === 4 && xhr.status === 200) {
+        const risultato = xhr.responseText;
+        document.querySelector('#risultato').textContent = risultato;
+      }
+    };
+    xhr.open('POST', 'calcola.php', true);
+    xhr.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
+    xhr.send(`numero=${numero}`);
+  });
+}
