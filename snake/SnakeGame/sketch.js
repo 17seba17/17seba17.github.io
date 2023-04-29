@@ -84,6 +84,18 @@ function draw() {
         noStroke();
         textSize(100);
         
+        if (canvas.width > 700) {
+
+
+            let newImageWidth = canvas.width - 2 * xOffset;
+            newImageWidth *= 0.6;
+            let widthRatio = newImageWidth / welcomeText.width;
+            let newImageHeight = welcomeText.height * widthRatio;
+            image(welcomeText, canvas.width / 2 - newImageWidth / 2, canvas.height / 2 - newImageHeight / 2, newImageWidth, newImageHeight);
+            fill(20, 230);
+            rect(canvas.width / 2 - newImageWidth / 2, canvas.height / 2 - newImageHeight / 2, newImageWidth, newImageHeight)
+
+        }
 
         fill(15);
         rect(0, 0, width, yOffset);
