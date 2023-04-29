@@ -4,7 +4,7 @@ var blocksX = 40;
 // var blocksX = 16;
 var blocksY = 20;
 
-let maxBlocks = 100;
+let maxBlocks = 10;
 // var blocksY = 8;
 let blockSize;
 let xOffset = 0;
