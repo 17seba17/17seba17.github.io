@@ -347,7 +347,7 @@ class Snake {
     ateApple() {
 
 
-        this.addCount += 4;
+        this.addCount += 1;
 
 
         this.apple = new Apple(this);
@@ -356,7 +356,7 @@ class Snake {
 
 
     }
-ateApple2() {  this.addCount += 4;
+ateApple2() {  this.addCount += 10;
 
 
         this.apple2 = new Apple(this);
