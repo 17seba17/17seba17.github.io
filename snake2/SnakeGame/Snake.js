@@ -9,7 +9,7 @@ class Snake {
         this.velX = 1;
         this.velY = 0;
         this.apple = new Apple(this);
-        //this.obstacle = new Obstacle(this);
+        this.obstacle = new Obstacle(this);
         this.addCount = 0;
         this.dead = false;
 
@@ -57,7 +57,7 @@ class Snake {
         rect((this.x + this.tailBlocks[this.tailBlocks.length - 1].x) * blockSize / 2.0 + outlineLength, (this.y + this.tailBlocks[this.tailBlocks.length - 1].y) * blockSize / 2.0 + outlineLength, blockSize - outlineLength * 2, blockSize - outlineLength * 2);
         for (var i = 0; i < this.tailBlocks.length; i++) {
             
-           fill(0, 200*i/this.tailBlocks.length+50, 0);
+           fill(0,0, 200*i/this.tailBlocks.length+50);
             rect(this.tailBlocks[i].x * blockSize + outlineLength, this.tailBlocks[i].y * blockSize + outlineLength, blockSize - outlineLength * 2, blockSize - outlineLength * 2);
             if (i < this.tailBlocks.length - 1) {
                 let x = (this.tailBlocks[i].x + this.tailBlocks[i + 1].x) / 2 * blockSize;
