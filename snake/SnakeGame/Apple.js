@@ -13,7 +13,7 @@ class Apple {
 
     show() {
         noStroke();
-        fill(0, 150, 0);
+        fill(150, 0, 0);//red
         // fill(100);
         // fill(255, 0, 0);\
         push();
