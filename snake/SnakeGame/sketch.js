@@ -4,7 +4,7 @@ var blocksX = 40;
 // var blocksX = 16;
 var blocksY = 20;
 
-let maxBlocks = 1000;
+let maxBlocks = 10000;
 // var blocksY = 8;
 let blockSize;
 let xOffset = 0;
@@ -97,7 +97,7 @@ function draw() {
             noStroke();
             textSize(blockSize*0.4);
             textAlign(LEFT, CENTER);
-            text("*canvas width>700", 20, canvas.height - 30);
+            text("***canvas width>700", 20, canvas.height - 30);
             pop();
         }
         push();
@@ -146,7 +146,7 @@ function keyPressed() {
             s.velX = 0;
             s.velY = 1;
             pause = false;
-            frameRate(10);
+            frameRate(1);
             break;
         // case LEFT_ARROW:
         //     s.velX = -1;
@@ -164,7 +164,7 @@ function keyPressed() {
     }
     switch (key) {
         case ' ':
-            speedMultiplier = 1;
+            speedMultiplier = 10;
             break;
 
     }
@@ -174,6 +174,6 @@ function keyPressed() {
 function keyReleased() {
     switch (key) {
         case ' ':
-            speedMultiplier = 10;
+            speedMultiplier = 1;
     }
 }
