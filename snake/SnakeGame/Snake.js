@@ -52,8 +52,7 @@ class Snake {
         rect((this.x + this.tailBlocks[this.tailBlocks.length - 1].x) * blockSize / 2.0 + outlineLength, (this.y + this.tailBlocks[this.tailBlocks.length - 1].y) * blockSize / 2.0 + outlineLength, blockSize - outlineLength * 2, blockSize - outlineLength * 2);
         for (var i = 0; i < this.tailBlocks.length; i++) {
             
-            if(i==this.tailBlocks.length-1){fill(50,0,150);}
-             else{fill(0, 200*i/this.tailBlocks.length+50, 0);}
+           fill(0, 200*i/this.tailBlocks.length+50, 0);
             rect(this.tailBlocks[i].x * blockSize + outlineLength, this.tailBlocks[i].y * blockSize + outlineLength, blockSize - outlineLength * 2, blockSize - outlineLength * 2);
             if (i < this.tailBlocks.length - 1) {
                 let x = (this.tailBlocks[i].x + this.tailBlocks[i + 1].x) / 2 * blockSize;
