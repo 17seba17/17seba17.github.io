@@ -1,0 +1,53 @@
+
+@font-face {
+    font-family: "bebas";
+    src: url("../fonts/bebas_neue/BebasNeue-Regular.ttf");
+}
+@font-face {
+    font-family: "montserrat-bold";
+    src: url("../fonts/montserrat/Montserrat-Bold.otf");
+}
+@font-face {
+    font-family: "montserrat";
+    src: url("../fonts/montserrat/Montserrat-Regular.otf");
+}
+/*body, html {*/
+/*    height: 100%;*/
+/*    margin: 0;*/
+/*}*/
+
+body {
+    background: #141414;
+    z-index:0;
+
+    /*background: #343434 url("images/snakeBackground.gif");*/
+    /*background-size: cover;*/
+}
+html{
+    background: #141414;
+}
+
+
+
+
+.hamburgerButton{
+    display:none;
+    background: none;
+    outline: none;
+    border: none;
+    z-index: 2;
+    grid-column: menu-start/menu-end;
+    justify-self: end;
+    align-self: center;
+    padding-right: 1em;
+}
+
+
+
+
+@media screen and (max-width: 700px){
+
+    .hamburgerButton{
+        display: block;
+    }
+}
