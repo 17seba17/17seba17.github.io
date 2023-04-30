@@ -9,7 +9,6 @@ class Snake {
         this.velX = 1;
         this.velY = 0;
         this.apple = new Apple(this);
-        this.apple2 = new Apple(this);
         this.addCount = 0;
         this.dead = false;
 
@@ -35,7 +34,7 @@ class Snake {
         this.x = cycle[3].x;
         this.y = cycle[3].y;
         this.apple = new Apple(this);
-        this.apple2 = new Apple(this);
+       
         this.headCyclePosition = 3;
         this.tailCyclePosition = 0;
 
@@ -67,7 +66,7 @@ class Snake {
 
         if (!this.weWin) {
             this.apple.show();
-            this.apple2.show();
+          
         }
 
         // push();
@@ -338,10 +337,7 @@ class Snake {
             this.ateApple();
         }
         
-        if (this.x === this.apple2.x && this.y === this.apple2.y) {
-            this.ateApple2();
-        }
-
+        
 
     }
 
@@ -358,12 +354,7 @@ class Snake {
 
 
     }
-ateApple2() {  this.addCount += 10;
 
-
-        this.apple2 = new Apple(this);
-            this.calculatePath();
-            }
 
     calculatePath() {
 
