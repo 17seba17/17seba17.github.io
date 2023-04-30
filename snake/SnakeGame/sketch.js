@@ -4,7 +4,7 @@ var blocksX = 40;
 // var blocksX = 16;
 var blocksY = 20;
 
-let maxBlocks = 10;
+let maxBlocks = 1000;
 // var blocksY = 8;
 let blockSize;
 let xOffset = 0;
@@ -18,9 +18,12 @@ let speedMultiplier = 1;
 let hc;
 let outlineLength = 3;
 
-
+let welcomeText;
 let previousHeadPositions = [];
 
+function preload() {
+    welcomeText = loadImage("SnakeGame/s/welcomeText.png");
+}
 
 function setup() {
 
