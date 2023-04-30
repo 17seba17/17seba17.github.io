@@ -146,7 +146,7 @@ function keyPressed() {
             s.velX = 0;
             s.velY = 1;
             pause = false;
-            frameRate(1);
+            frameRate(5);
             break;
         // case LEFT_ARROW:
         //     s.velX = -1;
