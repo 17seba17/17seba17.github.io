@@ -4,7 +4,7 @@ var blocksX = 40;
 // var blocksX = 16;
 var blocksY = 20;
 
-let maxBlocks = 1000;
+let maxBlocks = 10;
 // var blocksY = 8;
 let blockSize;
 let xOffset = 0;
@@ -44,8 +44,8 @@ function setup() {
     // .touchStarted(onclick);
 
 
-    
-    
+}
+
 function setBlocks() {
 
     let testBlockSize = 1;
@@ -83,7 +83,6 @@ function draw() {
         fill(255);
         noStroke();
         textSize(100);
-        
         if (canvas.width > 700) {
 
 
@@ -176,7 +175,7 @@ function keyPressed() {
     }
     switch (key) {
         case ' ':
-            speedMultiplier = 1;
+            speedMultiplier = 10;
             break;
 
     }
@@ -186,6 +185,6 @@ function keyPressed() {
 function keyReleased() {
     switch (key) {
         case ' ':
-            speedMultiplier = 10;
+            speedMultiplier = 1;
     }
 }
