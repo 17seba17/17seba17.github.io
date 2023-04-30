@@ -9,6 +9,7 @@ class Snake {
         this.velX = 1;
         this.velY = 0;
         this.apple = new Apple(this);
+         this.obstacle = new Obstacle(this);
         this.addCount = 0;
         this.dead = false;
 
@@ -34,6 +35,7 @@ class Snake {
         this.x = cycle[3].x;
         this.y = cycle[3].y;
         this.apple = new Apple(this);
+        this.obstacle = new Obstacle(this);
        
         this.headCyclePosition = 3;
         this.tailCyclePosition = 0;
@@ -66,6 +68,7 @@ class Snake {
 
         if (!this.weWin) {
             this.apple.show();
+             this.obstacle.show();
           
         }
 
@@ -349,6 +352,7 @@ class Snake {
 
 
         this.apple = new Apple(this);
+           this.obstacle = new Obstacle(this);
 
         this.calculatePath();
 
