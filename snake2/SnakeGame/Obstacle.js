@@ -3,10 +3,10 @@ class Obstacle {
         this.x = floor(random(blocksX));
         this.y = floor(random(blocksY));
 
-        while (snake.isAppleOnSnake(this)) {
+        
             this.x = floor(random(blocksX));
             this.y = floor(random(blocksY));
-        }
+        
         print(snake, this);
     }
 
