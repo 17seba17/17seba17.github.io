@@ -97,7 +97,7 @@ function draw() {
             noStroke();
             textSize(blockSize*0.4);
             textAlign(LEFT, CENTER);
-            text("*canvas width>700", 20, canvas.height - 30);
+            text("***canvas width>700", 20, canvas.height - 30);
             pop();
         }
         push();
