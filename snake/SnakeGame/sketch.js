@@ -4,7 +4,7 @@ var blocksX = 40;
 // var blocksX = 16;
 var blocksY = 20;
 
-let maxBlocks = 10000;
+let maxBlocks = 1000;
 // var blocksY = 8;
 let blockSize;
 let xOffset = 0;
@@ -97,7 +97,7 @@ function draw() {
             noStroke();
             textSize(blockSize*0.4);
             textAlign(LEFT, CENTER);
-            text("***canvas width>700", 20, canvas.height - 30);
+            text("*canvas width>700", 20, canvas.height - 30);
             pop();
         }
         push();
