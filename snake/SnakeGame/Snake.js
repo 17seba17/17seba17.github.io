@@ -49,8 +49,10 @@ class Snake {
 
         // this.survivalMode ? fill(200, 0, 0, 200) : fill(0, 200, 0);
         noStroke();
+        fill(255,255,255);
         rect(this.x * blockSize + outlineLength, this.y * blockSize + outlineLength, blockSize - outlineLength * 2, blockSize - outlineLength * 2);
 
+        fill(50,0,150);
         rect((this.x + this.tailBlocks[this.tailBlocks.length - 1].x) * blockSize / 2.0 + outlineLength, (this.y + this.tailBlocks[this.tailBlocks.length - 1].y) * blockSize / 2.0 + outlineLength, blockSize - outlineLength * 2, blockSize - outlineLength * 2);
         for (var i = 0; i < this.tailBlocks.length; i++) {
             
